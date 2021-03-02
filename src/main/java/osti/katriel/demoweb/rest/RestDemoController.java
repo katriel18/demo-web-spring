@@ -4,12 +4,14 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import osti.katriel.demoweb.model.Persona;
 import osti.katriel.demoweb.repository.IPersonaRepo;
 
 @RestController
+@RequestMapping("/personas")
 public class RestDemoController {
 
 	@Autowired
@@ -24,4 +26,4 @@ public class RestDemoController {
 	
 }
 
-//http://localhost:8080/   //  [ { idPersona: 1, nombre: "katriel" } ]
+//  http://localhost:8080/personas   //  [ { idPersona: 1, nombre: "katriel" } ]
