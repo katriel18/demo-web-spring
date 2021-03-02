@@ -25,8 +25,8 @@ class DemoWebApplicationTests {
 		Usuario usarioEnviado=new Usuario();
 		
 		usarioEnviado.setId(3);
-		usarioEnviado.setNombre("osti");					//osti
-		usarioEnviado.setClave(encoder.encode("katriel"));	//katriel
+		usarioEnviado.setNombre("admin");					//osti 2
+		usarioEnviado.setClave(encoder.encode("123"));	//katriel 2
 		
 		Usuario usarioRetornado=usuarioRepo.save(usarioEnviado);
 		
