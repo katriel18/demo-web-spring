@@ -3,7 +3,12 @@ package osti.katriel.demoweb.rest;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,6 +27,27 @@ public class RestDemoController {
 
 		return personaRepo.findAll();
 
+	}
+	
+	@PostMapping
+	public void insertar(@RequestBody Persona persona) {
+		
+		personaRepo.save(persona);
+		
+	}
+	
+	@PutMapping
+	public void modificar(@RequestBody Persona persona) {
+		
+		personaRepo.save(persona);
+		
+	}
+	
+	@DeleteMapping(value="/{id}")
+	public void eliminar(@PathVariable("id") Integer id) {
+		
+		personaRepo.deleteById(id);
+		
 	}
 	
 }
