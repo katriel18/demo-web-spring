@@ -24,9 +24,11 @@ class DemoWebApplicationTests {
 		
 		Usuario usarioEnviado=new Usuario();
 		
-		usarioEnviado.setId(3);
-		usarioEnviado.setNombre("admin");					//osti 2
-		usarioEnviado.setClave(encoder.encode("123"));	//katriel 2
+		//no puede haber dos nombres de usuario igual - no loguea (ni con contraseñas iguales, ni con contraseñas diferentes)
+		//si puedes haber dos contraseñas igual pero diferente usuario
+		usarioEnviado.setId(1);
+		usarioEnviado.setNombre("osti");					//osti //katriel
+		usarioEnviado.setClave(encoder.encode("1234"));	//1234 //1234
 		
 		Usuario usarioRetornado=usuarioRepo.save(usarioEnviado);
 		

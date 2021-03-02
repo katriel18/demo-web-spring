@@ -31,11 +31,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
 	// CREDENCIALES EN MEMORIA //No necesita las clases Usuario, IUsuarioRepo, UserService
+	/*
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
 		auth.inMemoryAuthentication().withUser("user").password(encoder.encode("123")).roles("USER").and()
 			.withUser("user2").password(encoder.encode("123")).roles("ADMIN", "USER");
+	
+	}
+	*/
+	
+	//CREDENCIALES DE LA TABLA USUARIO
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+
+		auth.userDetailsService(userDetailService).passwordEncoder(encoder);
+	
 	}
 
 	// CONFIGURACION DE PERMISOS DE LAS PETICIONES
