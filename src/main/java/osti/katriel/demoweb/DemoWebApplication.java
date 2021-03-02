@@ -13,4 +13,4 @@ public class DemoWebApplication {
 }
 
 
-//jadk y vista de jre actualiazado a 1.8 para deployar (update proyect...)
+//jdk y vista de jre actualiazado a 1.8 para deployar (update proyect...)
