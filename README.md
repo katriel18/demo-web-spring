@@ -1,7 +1,7 @@
 # demo-web-spring
 Realizado en spring tool suite 4
 
-## Credenciles: osti/katriel 1234
+## Credenciales: osti/katriel 1234
 
 ## Listar personas
 https://demo-web-spring-security.herokuapp.com/listar
